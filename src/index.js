@@ -7,6 +7,9 @@ async function startApolloServer(typeDefs, resolvers) {
   const server = new ApolloServer({
     typeDefs,
     resolvers,
+    cors: {
+      origin: ["https://client-catstronauts1111.herokuapp.com/", "https://studio.apollographql.com"]
+    },
     dataSources: () => {
       return {
         trackAPI: new TrackAPI(),
