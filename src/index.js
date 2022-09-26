@@ -8,6 +8,7 @@ async function startApolloServer(typeDefs, resolvers) {
     typeDefs,
     resolvers,
     cors: {
+      credentials: true,
       origin: ["https://client-catstronauts1111.herokuapp.com", "https://studio.apollographql.com"]
     },
     dataSources: () => {
